@@ -1,9 +1,14 @@
 # Install dependencies (Run this in terminal, not inside the script)
-pip install -r requirements.txt
+
 
 from langchain_huggingface import HuggingFaceEndpoint, ChatHuggingFace
 from dotenv import load_dotenv
 import streamlit as st
+import os
+
+if not os.path.exists(".installed_dependencies"):  # Run only once
+    os.system("pip install -r requirements.txt")
+    open(".installed_dependencies", "w").close()
 
 # Load environment variables
 load_dotenv()
