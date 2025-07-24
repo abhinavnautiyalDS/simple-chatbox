@@ -11,7 +11,7 @@ if not os.path.exists(".installed_dependencies"):  # Run only once
     open(".installed_dependencies", "w").close()
 
 # Load environment variables
-load_dotenv()
+load_dotenv(.env)
 
 # Set up the Hugging Face endpoint
 llm = HuggingFaceEndpoint(
