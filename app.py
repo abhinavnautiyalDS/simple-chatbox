@@ -28,4 +28,4 @@ user_input = st.text_input("Enter your prompt")
 
 if st.button("Summarise"):
     result = model.invoke(user_input)
-    st.write(re
+    st.write(result.content)
